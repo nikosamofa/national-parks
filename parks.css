@@ -41,6 +41,7 @@ h3{
   text-align: center;
   padding-bottom:10px;
   font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h2{
@@ -88,6 +89,7 @@ p {
   font-size: 18px;
   padding-bottom: 10px;
   padding-top: 10px;
-  text-align: center;
+  text-align: justify;
+ font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
