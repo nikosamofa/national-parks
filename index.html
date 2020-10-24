@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Park Search</title>
-    <link rel="stylesheet" type="text/stylesheet" href="parks.css">
+    <link rel="stylesheet" href="parks.css">
 </head>
 
 <body>
@@ -14,13 +14,16 @@
 
             <form id="parks-form" role="searchForm">
                 <h1> National Park Search</h1>
+
                 <p>Plan your vacation by searching for parks based on your prefered location.</p>
+
                 <label for="area"> Location : </label>
                 <input id="js-area" type="text" placeholder="State" name="area" required>
 
                 <label for="maxResults">Number of sites: </label>
                 <input type="number" name="maxResults" id="js-maxResults" placeholder="10" min="1" max="10" required>
-                <button type="submit" id="submit">list sites</button>
+
+                <button type="submit" id="submit">Search</button>
             </form>
             <hr>
             <section class="results" hidden>

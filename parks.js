@@ -53,11 +53,11 @@ function displayResults(responseJson) {
         $('#js-result-list').append(
             `<li>
 
-            <h3>National Park : ${responseJson.data[i].fullName}</h3>
+            <h3> ${responseJson.data[i].fullName}</h3>
             <img src="${responseJson.data[i].images[0].url}">
             <p>${responseJson.data[i].description}</p>
             <p>visite: <a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></p>
-            
+            </hr>
             </li>`)
     };
     $('.results').removeAttr('hidden');
