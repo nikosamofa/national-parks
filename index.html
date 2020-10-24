@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Search</title>
+    <link rel="stylesheet" type="text/stylesheet" href="parks.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <form id="parks-form" role="searchForm">
+                <h1> National Park Search</h1>
+                <p>Plan your vacation by searching for parks based on your prefered location.</p>
+                <label for="area">Enter the location : </label>
+                <input id="js-area" type="text" placeholder="State" name="area" required>
+
+                <label for="maxResults">Number of sites</label>
+                <input type="number" name="maxResults" id="js-maxResults" placeholder="10" min="1" max="10">
+                <button type="submit" id="submit">list sites</button>
+            </form>
+
+            <section class="results" hidden>
+                <h2>Here is your search results</h2>
+                <ul id="js-result-list">
+
+                </ul>
+            </section>
+
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="parks.js"></script>
+</body>
+
+</html>

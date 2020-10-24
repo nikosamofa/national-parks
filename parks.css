@@ -1,0 +1,25 @@
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Geneva', sans-serif;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  input {
+        text-align: center;
+    }
+
+ 
+  
