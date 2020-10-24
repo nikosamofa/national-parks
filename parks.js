@@ -11,7 +11,7 @@ function watchForm() {
         let location = $('#js-area').val();
         let maxlist = $('#js-maxResults').val();
         getParks(location, maxlist);
-        
+
     });
 };
 
@@ -19,19 +19,20 @@ function watchForm() {
 function queryFormat(params) {
     const queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');
-    
+
 }
 
 
 function getParks(location, maxlist) {
-    const params = {    
+
+    const params = {
         q: location,
         limit: maxlist,
         'api_key': 'CU2YRsxQEkovXPCUbJXWOkDGMH5Tnp4E4rx6hFO1'
     };
     const queryString = queryFormat(params);
     const searchUrl = url + '?' + queryString;
-  
+
     fetch(searchUrl)
         .then(response => {
             if (response.ok) {
@@ -45,14 +46,18 @@ function getParks(location, maxlist) {
 
 
 function displayResults(responseJson) {
-    $('#result-list').empty();
 
-    for (let i = 0; i < responseJson.data; i++) {
+    $('#js-result-list').empty();
+
+    for (let i = 0; i < responseJson.data.length; i++) {
         $('#js-result-list').append(
             `<li>
-            <h3>National Park : ${responseJson[i].data.fullName}</h3>
+
+            <h3>National Park : ${responseJson.data[i].fullName}</h3>
+            <img src="${responseJson.data[i].images[0].url}">
             <p>${responseJson.data[i].description}</p>
-            <p><a href="${responseJson.data[i].url}">Visit the website</a></p>
+            <p>visite: <a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></p>
+            
             </li>`)
     };
     $('.results').removeAttr('hidden');
