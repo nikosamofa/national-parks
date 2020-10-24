@@ -9,7 +9,7 @@ This is a sample wireframe for a national park search app that displays availabl
 - API from National Park Service [NPS](https://www.nps.gov/subjects/developer/api-documentation.htm#/parks/getPark)
 
 
-check it out [here!](https://nikosamofa.github.io/natioinal-parks/)
+check it out [here!](https://nikosamofa.github.io/national-parks/)
 
 ## Feedback 
 As a student, I value any constructive feedback you share to improve on my skills.
