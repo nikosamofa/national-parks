@@ -18,14 +18,14 @@
                 <p>Plan your vacation by searching for parks based on your prefered location.</p>
 
                 <label for="area"> Location : </label>
-                <input id="js-area" type="text" placeholder="State" name="area" required>
+                <input id="js-area" type="text" placeholder="Enter State" name="area" required>
 
                 <label for="maxResults">Number of sites: </label>
                 <input type="number" name="maxResults" id="js-maxResults" placeholder="10" min="1" max="10" required>
 
                 <button type="submit" id="submit">Search</button>
             </form>
-            <hr>
+            <p id="js-error-message" class="error-message"></p>
             <section class="results" hidden>
                 <h2>Search results</h2>
                 <ul id="js-result-list">
