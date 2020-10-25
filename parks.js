@@ -38,7 +38,7 @@ function getParks(location, maxlist) {
             if (response.ok) {
                 return response.json()
             }
-            throw new Error(response.statusText)
+            else { throw new Error(response.statusText) }
         })
         .then(responseJson => displayResults(responseJson))
         .catch(error => alert('Something went wrong, Please try again.'));
@@ -48,18 +48,25 @@ function getParks(location, maxlist) {
 function displayResults(responseJson) {
 
     $('#js-result-list').empty();
-
-    for (let i = 0; i < responseJson.data.length; i++) {
+    if (responseJson.data.length == 0) {
         $('#js-result-list').append(
-            `<li>
-
-            <h3> ${responseJson.data[i].fullName}</h3>
-            <img src="${responseJson.data[i].images[0].url}">
-            <p>${responseJson.data[i].description}</p>
-            <p>visite: <a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></p>
-            </hr>
+            `<li>            
+            <p>No results</p>
             </li>`)
-    };
+    }
+    else {
+        for (let i = 0; i < responseJson.data.length; i++) {
+            $('#js-result-list').append(
+                `<li>
+    
+                <h3> ${responseJson.data[i].fullName}</h3>
+                <img src="${responseJson.data[i].images[0].url}">
+                <p>${responseJson.data[i].description}</p>
+                <p>visite: <a href="${responseJson.data[i].url}">${responseJson.data[i].url}</a></p>
+                </hr>
+                </li>`)
+        }
+    }
     $('.results').removeAttr('hidden');
 };
 
